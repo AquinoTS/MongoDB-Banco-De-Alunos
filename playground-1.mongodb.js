@@ -83,7 +83,7 @@ const alunos = db.getCollection('alunos').find().toArray();
 console.log("Alunos:");
 printTable(alunos);
 
-// Query to find alunos of a professor
+// Query para encontrar alunos do professor
 const professorName = 'Fernando Oliveira';
 const cursosDoProfessor = db.getCollection('cursos').find({ professores: professorName }).toArray();
 const cursos = cursosDoProfessor.map(c => c.nome);
